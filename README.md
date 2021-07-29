@@ -7,7 +7,7 @@ You can find the paper [here](https://arxiv.org/pdf/2107.12578.pdf)
 
 See below for an overview of the model architecture:
 
-![DSSDST Architecture](fig/Arch.png "DSSDST Architecture")
+![DSSDST Architecture](Arch.jpeg "DSSDST Architecture")
 
   
 
