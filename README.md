@@ -69,6 +69,11 @@ To reproduce the performance as we report in the paper, you can download the tra
 bash eval_model.sh
 ```
 
+## Concat
+Due to previous experiments, some redundant code and trivial bugs remain in this version. We are sorry about this and doing our best to eliminate them. If you have any questions, you can contact Jinyu Guo(guojinyu@bupt.edu.cn) and Jijie Li (lijijie@bupt.edu.cn).
+
+
+
 ## Citation
 
 ```
