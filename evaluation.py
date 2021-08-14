@@ -4,7 +4,7 @@ from utils.data_utils import make_slot_meta, domain2id, OP_SET, make_turn_label,
 from utils.eval_utils import compute_prf, compute_acc, per_domain_join_accuracy
 from pytorch_transformers import BertTokenizer, BertConfig
 
-from model import SomDST
+from models.model import DualReader
 from collections import Counter
 import torch.nn as nn
 import torch
@@ -33,7 +33,7 @@ def main(args):
     model_config = BertConfig.from_json_file(args.bert_config_path)
     model_config.dropout = 0.1
     op2id = OP_SET[args.op_code]
-    model = SomDST(model_config, len(op2id), len(domain2id), op2id['update'])
+    model = DualReader(args, args.n_op, args.n_domain, 0, None, None,turn=2)
     ckpt = torch.load(args.model_ckpt_path, map_location='cpu')
     model.load_state_dict(ckpt)
 
