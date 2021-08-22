@@ -30,14 +30,21 @@ We have released the trained model and output of each training turn. You can fin
 
 To download the MultiWOZ dataset and preprocess it, please run this script first.<br>
 You can choose the version of the dataset. ('2.1', '2.0', '2.2')<br>
-The downloaded original dataset will be located in `$DOWNLOAD_PATH`, and after preprocessing, it will be located in `$TARGET_PATH`.
+
 ```
 python3 create_data.py --main_dir $DOWNLOAD_PATH --target_path $TARGET_PATH --mwz_ver '2.1' # , '2.0' # or '2.2'
 ```
 
+The downloaded original dataset will be located in `$DOWNLOAD_PATH`. After preprocessing, it will output three files -- train_dials.json, dev_dials.json, and test_dials.json out put them under the `$TARGET_PATH`.
+
+## Download the pretrained model
+
+Our best performance is built on the pretrained ALBERT-large-v2. You can obtain this model from https://huggingface.co/models and put it under the [pretrained_models](https://github.com/guojinyu88/DSSDST/blob/master/pretrained_models) folder.
+
+
 ## Training
 
-  
+Before training, make sure you have prepared all input files(data/train_dials.json, data/dev_dials.json, data/dev_dials.json) and models(pretrained_models/).
 
 To train the model of preliminary slot selector, you can run:
 
