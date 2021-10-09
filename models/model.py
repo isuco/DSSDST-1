@@ -1,9 +1,3 @@
-"""
-SOM-DST
-Copyright (c) 2020-present NAVER Corp.
-MIT license
-"""
-
 import torch
 import torch.nn as nn
 from transformers.configuration_bert import BertConfig
